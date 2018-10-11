@@ -6,9 +6,11 @@ import router from './router'
 // 引入fastclick解决手机端点击延迟300毫秒的问题
 import fastClick from 'fastclick'
 // 重置基本样式
-import './assets/reset.css'
+import 'styles/reset.css'
 // 解决边框在不同分辨屏的不同像素大小
-import './assets/border.css'
+import 'styles/border.css'
+
+import 'styles/iconfont.css'
 
 Vue.config.productionTip = false
 
