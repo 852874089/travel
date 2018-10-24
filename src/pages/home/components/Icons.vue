@@ -9,7 +9,7 @@
         <p class="icon-desc">{{item.desc}}</p>
       </div>
     </swiper-slide>
-    <div class="swiper-pagination"  slot="pagination"></div>
+    <!--<div class="swiper-pagination"  slot="pagination"></div>-->
 
   </swiper>
   </div>
@@ -60,10 +60,6 @@ export default {
         id: '0008',
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
         desc: '游乐场'
-      }, {
-        id: '0009',
-        imgUrl: 'https://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-        desc: '打卡圣地'
       }]
     }
   },
@@ -89,8 +85,9 @@ export default {
 </script>
 
 <style scoped>
+  .icons{margin-top: 0.1rem;}
   .icons >>> .swiper-container{width: 100%; overflow: hidden; height: 0; padding-bottom: 50%; }
-  .icons .icon{width: 25%; float: left; height: 0; padding-bottom: 25%; position: relative;}
+  .icons .icon{width: 25%; float: left; height: 0; padding-bottom: 24.5%; position: relative;}
   .icons .icon-img-con{ position: absolute; top: 0; left: 0; right: 0; bottom: 0.44rem; }
   .icons .icon-img{height: 100%; margin: 0 auto; display: block; padding: 0.1rem;}
   .icons .icon-desc{overflow: hidden; white-space: nowrap; text-overflow: ellipsis; position: absolute; left: 0; right: 0; bottom: 0; height: 0.44rem; line-height: 0.44rem; text-align: center; color: #333333;}
