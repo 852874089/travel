@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.td">
+      <li class="item border-bottom" v-for="item of WeekendList" :key="item.td">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl" />
         </div>
@@ -20,7 +20,7 @@ export default {
   name: 'homeWeekend',
   data () {
     return {
-      recommendList: [{
+      WeekendList: [{
         id: '0001',
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1810/a8/664024556572fd02.jpg_750x200_ffe41025.jpg',
         title: '长隆野生动物世界',
@@ -41,7 +41,6 @@ export default {
     height: 0.8rem;
     line-height: 0.8rem;
     text-indent: 0.2rem;
-    margin-top: 0.2rem;
     background: #eeeeee;
   }
   .item-img-wrapper{

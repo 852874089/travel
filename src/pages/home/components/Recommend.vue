@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">热门推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.td">
+      <li class="item border-bottom" v-for="item of list" :key="item.td">
         <img class="item-img" :src="item.imgUrl" />
 
         <div class="item-info">
@@ -18,30 +18,8 @@
 <script>
 export default {
   name: 'homeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1810/2d/2d7b45e94187416ea3.img.jpg_200x200_7b01f790.jpg',
-        title: '长隆野生动物世界',
-        desc: '爱挑战的你怎能错过垂直过山车'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1810/2d/2d7b45e94187416ea3.img.jpg_200x200_7b01f790.jpg',
-        title: '长隆野生动物世界',
-        desc: '爱挑战的你怎能错过垂直过山车'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1810/2d/2d7b45e94187416ea3.img.jpg_200x200_7b01f790.jpg',
-        title: '长隆野生动物世界',
-        desc: '爱挑战的你怎能错过垂直过山车'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1810/2d/2d7b45e94187416ea3.img.jpg_200x200_7b01f790.jpg',
-        title: '长隆野生动物世界',
-        desc: '爱挑战的你怎能错过垂直过山车'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

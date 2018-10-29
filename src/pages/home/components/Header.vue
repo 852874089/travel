@@ -8,7 +8,8 @@
       输入城市/景点/游玩主题
     </div>
     <router-link to="/city">
-      <div class="header-right">城市
+      <div class="header-right">
+        {{city}}
         <span class="iconfont">&#xe6aa;</span>
       </div>
     </router-link>
@@ -17,7 +18,11 @@
 
 <script>
 export default{
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  // 接收父组件传过来的值
+  props: {
+    city: String
+  }
 }
 </script>
 <!--添加scoped使样式只作用于当前组件的样式，不能改变其他组件的样式-->
