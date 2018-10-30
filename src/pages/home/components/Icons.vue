@@ -9,7 +9,7 @@
         <p class="icon-desc">{{item.desc}}</p>
       </div>
     </swiper-slide>
-    <!--<div class="swiper-pagination"  slot="pagination"></div>-->
+    <div class="swiper-pagination"  slot="pagination"></div>
 
   </swiper>
   </div>
@@ -27,9 +27,11 @@ export default {
         // 定义轮播指标
         pagination: {
           el: '.swiper-pagination'
-        }
+        },
         // 循环轮播
-        // loop: true
+        loop: true
+        // 设置自动轮播到下一张banner
+        // autoplay: true
       }
     }
   },

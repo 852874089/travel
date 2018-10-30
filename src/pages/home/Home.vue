@@ -5,7 +5,7 @@
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :list="iconList"></home-icons>
     <home-recommend :list="recommendList"></home-recommend>
-    <home-weekend></home-weekend>
+    <home-weekend :list="WeekendList"></home-weekend>
   </div>
 </template>
 
@@ -34,14 +34,18 @@ export default{
       city: '',
       swiperList: [],
       iconList: [],
-      recommendList: []
+      recommendList: [],
+      WeekendList: []
     }
   },
   methods: {
     getHomeInfo () {
+      // 请求一个url api/index.json
+      // then 返回对象
       axios.get('/api/index.json')
         .then(this.getHomeInfoSucc)
     },
+    // 请求成功 返回数据
     getHomeInfoSucc (res) {
       res = res.data
       // 如果后端正确返回结果 或者res里面有data
@@ -52,10 +56,12 @@ export default{
         this.swiperList = data.swiperList
         this.iconList = data.iconList
         this.recommendList = data.recommendList
+        this.WeekendList = data.WeekendList
       }
     }
   },
   mounted () {
+    // 页面挂载好之后 执行getHomeInfo()方法
     this.getHomeInfo()
   }
 }

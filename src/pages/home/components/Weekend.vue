@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="item of WeekendList" :key="item.td">
+      <li class="item border-bottom" v-for="item of list" :key="item.td">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl" />
         </div>
@@ -18,20 +18,8 @@
 <script>
 export default {
   name: 'homeWeekend',
-  data () {
-    return {
-      WeekendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1810/a8/664024556572fd02.jpg_750x200_ffe41025.jpg',
-        title: '长隆野生动物世界',
-        desc: '爱挑战的你怎能错过垂直过山车'
-      }, {
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1810/a8/664024556572fd02.jpg_750x200_ffe41025.jpg',
-        title: '长隆野生动物世界',
-        desc: '爱挑战的你怎能错过垂直过山车'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
