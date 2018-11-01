@@ -1,14 +1,13 @@
 <template>
-  <div>
-    广州
-    <router-link>
-      测试
-    </router-link>
-  </div>
+  <city-header></city-header>
 </template>
 
 <script>
+import CityHeader from './components/CityHeader'
 export default{
-  name: 'City'
+  name: 'City',
+  components: {
+    CityHeader
+  }
 }
 </script>

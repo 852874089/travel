@@ -18,6 +18,9 @@ import 'styles/iconfont.css'
 // 轮播图样式
 import 'swiper/dist/css/swiper.css'
 
+// 公共样式
+import 'styles/site.css'
+
 Vue.config.productionTip = false
 
 // 把fastclick绑定到代码body里面
