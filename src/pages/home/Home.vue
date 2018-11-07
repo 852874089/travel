@@ -39,6 +39,7 @@ export default{
     }
   },
   methods: {
+    // 定义方法
     getHomeInfo () {
       // 请求一个url api/index.json
       // then 返回对象
@@ -50,8 +51,9 @@ export default{
       res = res.data
       // 如果后端正确返回结果 或者res里面有data
       if (res.ret && res.data) {
+        // 重新定义data 为后端获取的data
         const data = res.data
-        // 返回后端的city
+        // 返回后端的city 复制到当前data返回的数据
         this.city = data.city
         this.swiperList = data.swiperList
         this.iconList = data.iconList
