@@ -12,8 +12,10 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
+        // 把api地址映射后端服务器地址 不一定是localhost地址，可能是内网ip地址，或者是外网的域名
           target: 'http://localhost:8080/',
         pathRewrite: {
+            //  这是模拟的 把所有api地址映射到本地前端地址 (当拿到真是后端数据之后，pathRewrite这块内容可以删掉)
           '^/api': '/static/mock'
         }
       }

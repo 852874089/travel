@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type=button value=后退 @click="back">
+    <input type=button value=后退 @click="$router.go(-1)">
   </div>
 </template>
 
@@ -20,3 +20,6 @@ export default{
   }
 }
 </script>
+<style>
+  input{font-size: 0.36rem; margin-top: 0.4rem;}
+</style>

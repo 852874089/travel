@@ -50,9 +50,12 @@ export default {
     padding-top: 0.1rem;
   }
   .item-title{
+    color: #333333;
     line-height: 0.54rem;
-    font-size: 0.36em;
-    overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+    font-size: 0.32rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .item-desc{
     line-height: 0.4rem;

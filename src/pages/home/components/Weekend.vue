@@ -43,8 +43,9 @@ export default {
     padding: 0.1rem;
   }
   .item-title{
+    color: #333333;
     line-height: 0.54rem;
-    font-size: 0.36em;
+    font-size: 0.32rem;
     overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
   }
   .item-desc{
