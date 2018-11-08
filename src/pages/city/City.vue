@@ -2,8 +2,8 @@
   <div>
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :cities="cities" :hot="hotCities"></city-list>
-    <city-alphabet :cities="cities" ></city-alphabet>
+    <city-list :cities="cities" :hot="hotCities" :letter="letter"></city-list>
+    <city-alphabet :cities="cities" @change="handleLetterChange"></city-alphabet>
   </div>
 </template>
 
@@ -26,7 +26,9 @@ export default{
   data () {
     return {
       hotCities: [],
-      cities: {}
+      cities: {},
+      // 定义letter数据
+      letter: ''
     }
   },
   methods: {
@@ -44,6 +46,11 @@ export default{
         this.hotCities = data.hotCities
         this.cities = data.cities
       }
+    },
+    handleLetterChange (letter) {
+      // 让letter数据等于 alphabet.vue传过来的letter, 然后把letter用属性的形式传递给list.vue
+      this.letter = letter
+      // console.log(letter)
     }
   },
   mounted () {

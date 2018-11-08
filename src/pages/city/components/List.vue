@@ -17,7 +17,12 @@
           </div>
         </div>
       </div>
-      <div class="area" v-for="(item , key) of cities" :key="key">
+      <div
+        class="area"
+        v-for="(item , key) of cities"
+        :key="key"
+        :ref="key"
+      >
         <div class="title border-topbottom">{{key}}</div>
         <div class="item-list">
           <div class="item border-bottom"
@@ -35,12 +40,28 @@ export default {
   props: {
     // 接收父组件传过来的参数
     hot: Array,
-    cities: Object
+    cities: Object,
+    letter: String
   },
   mounted () {
-    // this.scroll = this.BScroll(this.$refs.wrapper)
-    const wrapper = document.querySelector('.wrapper')
-    const scroll = new BScroll(wrapper)
+    // 当 DOM 结构发送变化的时候并没有重新计算 better-scroll
+    this.$nextTick(() => {
+      this.scroll = new BScroll(this.$refs.wrapper, {})
+    })
+  },
+  // 侦听letter的变化
+  watch: {
+    // letter发生改变就执行代码
+    // better-scroll 提供方法 滚动区域自动滚动到指定区域
+    letter () {
+      // 如果letter不为空时
+      if (this.letter) {
+        // 通过$ref获取对应的dom v-for循环输出的是一个数组，应该获取当前dom元素 后面加[0]
+        const element = this.$refs[this.letter][0]
+        this.scroll.scrollToElement(element)
+        // console.log(element)
+      }
+    }
   }
 }
 </script>
